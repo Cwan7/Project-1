@@ -44,6 +44,7 @@ nav li:first-child {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid black;
+    padding: 10px 20px;
 
 }
 .pop-up {
@@ -52,9 +53,11 @@ nav li:first-child {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
+    max-width: 800px;
     background-color: white;
     outline: 1px solid black;
     border-radius: 5px;
+    display: none;
 }
 .pop-up-title {
     display: flex;
@@ -63,4 +66,18 @@ nav li:first-child {
 }
 .pop-up-body {
     margin: 15px
+}
+.pop-up-header .close-pop-up {
+    background-color: white;
+    cursor: pointer;
+}
+@media(max-width: 650px ) {
+    .pop-up-body {
+        font-size: 12px;
+    }
+}
+@media(max-width: 540px) {
+    .hideOnSmall {
+        display: none;
+    }
 }
