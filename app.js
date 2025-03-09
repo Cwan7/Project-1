@@ -4,7 +4,7 @@ const closeButtonElement = document.querySelector('.close-pop-up')
 
 let didItPopUP = false;
 
-
+//---------------------------------HomeScreen---------------------------
 document.body.addEventListener('click', function(event) {
     if (didItPopUP === true) return;
     else {
@@ -15,4 +15,4 @@ document.body.addEventListener('click', function(event) {
 closeButtonElement.addEventListener('click', () => {
         popUpElement.style.display = 'none'
 })
-
+//---------------------------------HomeScreen---------------------------

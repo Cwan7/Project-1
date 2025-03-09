@@ -71,6 +71,40 @@ nav li:first-child {
     background-color: white;
     cursor: pointer;
 }
+.buttons-input {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0;
+    
+}
+.buttons-button {
+    display: flex;
+    justify-content: space-evenly;
+}
+.dogs-button, .prime-button, .zodiac-button {
+    width: 150px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(255, 137, 137);
+}
+.buttons-result-container {
+    width: 400px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 200px
+    
+}
+.buttons-result {
+    text-align: center;
+    margin: auto;
+    font-size: 34px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
 @media(max-width: 650px ) {
     .pop-up-body {
         font-size: 12px;
