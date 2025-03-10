@@ -44,7 +44,7 @@ nav li:first-child {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid black;
-    padding: 10px 20px;
+    padding: 10px 10px;
 
 }
 .pop-up {
