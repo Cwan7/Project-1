@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="Home.html"><span class="material-symbols-outlined home-icon">home</span></a></li>
+            <li class="hideOnSmall"><a href="Buttons.html">Buttons</a></li>
+            <li class="hideOnSmall"><a href="Dogs.html">Dogs Tricks</a></li>
+            <li class="hideOnSmall"><a href="#">Builds</a></li>
+            <li class="hideOnSmall"><a href="#">Remote Controller</a></li>
+            <li class="menu-button"><a href="#"><span class="material-symbols-outlined menu-icon">menu</span></a></li>
+        </ul>
+    </nav>
+    <div class="video-button-container">
+        <button class="dog-button june-button">Juniper Sitting Pretty</button>
+        <button class="dog-button charlee-button">Charlee Getting Beers</button>
+    </div>
+    <div class="video-container">
+        <video class="june-sitting" controls src="videos/Juniper sitting pretty.mp4" width="300"></video> 
+
+        <video class="charlee-beer" controls src="videos/CharleeBeer.mp4" width="300"></video>
+    </div>
+</body>
+<script>
+    const juneButtonElement = document.querySelector('.june-button');
+    const charleeButtonElement = document.querySelector('.charlee-button');
+    const charleeVideoElement = document.querySelector('.charlee-beer');
+    const juneVideoElement = document.querySelector('.june-sitting');
+
+    let juneClicked = false;
+    let charleeClicked = false;
+
+    juneButtonElement.addEventListener('click', () => {
+        if (juneClicked === true) {
+            juneVideoElement.style.display='none';
+            juneClicked = false;
+            return
+        }
+        if (juneClicked === false) {
+            juneVideoElement.style.display='block';
+            juneClicked = true;
+        }
+    })
+    charleeButtonElement.addEventListener('click', () => {
+        if (charleeClicked === true) {
+            charleeVideoElement.style.display='none';
+            charleeClicked = false;
+            return
+        }
+        if (charleeClicked === false) {
+            charleeVideoElement.style.display='block';
+            charleeClicked = true;
+        }
+    })
+
+</script>
+
+</html>
