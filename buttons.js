@@ -8,6 +8,7 @@ const resultElement = document.querySelector('.buttons-result')
 const allInputsElement = document.querySelector('.input')
 
 dogsAgeInputElement.addEventListener('click', clearResult)
+primeInputElement.addEventListener('click', clearResult)
 
 dogsAgeButtonElement.addEventListener('click', () => {
     dogsAge = dogsAgeInputElement.value;
@@ -22,6 +23,8 @@ dogsAgeButtonElement.addEventListener('click', () => {
 function clearResult (){
     resultElement.innerHTML = '';
     dogsAgeInputElement.value = '';
+    primeInputElement.value = '';
+
 }
 primeButtonElement.addEventListener('click', checkPrime);
 
