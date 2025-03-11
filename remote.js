@@ -51,9 +51,10 @@ numberPadElement.addEventListener('click', (event) => {
 })
 channelUpElement.addEventListener('click', () => {
     if (!isTvOn) return; 
-    let currentChannelNum = Number(currentChannel) // Convert to number,
+    let currentChannelNum = Number(currentChannel) // Convert to number so I can increment it,
     currentChannelNum += 1; 
-    currentChannel = currentChannelNum.toString(); // Convert back to string
+    currentChannel = currentChannelNum.toString(); // Convert back to string for buttons
+    if (currentChannel > 99){currentChannel = 1}
     channelDisplayElement.innerHTML = `Channel <span class="number">${currentChannel}</span>`;
     clearTimeout(channelTimeout);
     channelTimeout = setTimeout(clearChannel, 3000); 
@@ -64,6 +65,7 @@ channelDownElement.addEventListener('click', () => {
     let currentChannelNum = Number(currentChannel);
     currentChannelNum -= 1;
     currentChannel = currentChannelNum.toString();
+    if (currentChannel <= 0){currentChannel = 99}
     channelDisplayElement.innerHTML = `Channel <span class="number">${currentChannel}</span>`;
     clearTimeout(channelTimeout);
     channelTimeout = setTimeout(clearChannel, 3000);

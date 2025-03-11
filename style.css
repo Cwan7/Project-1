@@ -87,6 +87,15 @@ nav li:first-child {
     border-radius: 5px;
     background-color: rgb(255, 137, 137);
 }
+.dogs-button:hover{
+    background-color:  rgb(249, 96, 96);
+}
+.prime-button:hover {
+    background-color:  rgb(249, 96, 96);
+}
+.zodiac-button:hover {
+    background-color:  rgb(249, 96, 96);
+}
 .buttons-result-container {
     width: 400px;
     height: 150px;
@@ -129,6 +138,9 @@ nav li:first-child {
     font-size: 15px;
     background-color: rgb(255, 137, 137);
 }
+.dog-button:hover {
+    background-color:  rgb(249, 96, 96);
+}
 /*-------------------------------Remote-------------------------*/
 .remote-container {
     display: flex;
@@ -165,7 +177,7 @@ nav li:first-child {
     font-size: 14px;
 }
 
-button:hover {
+.remote-container button:hover {
     background-color: #777;
 }
 
@@ -242,6 +254,51 @@ button:hover {
     font-size: 200px;
     z-index: 5; /* so emoji is above background but lesser then Ch/vl */
 }
+.photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.lfx-photos {
+    width: 540px;
+    height: 405px;
+    border: 15px solid #8B4513;
+    outline: 12px solid #333;
+    box-shadow: 20px 20px 10px;
+}
+.previous-button {
+    width: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(255, 137, 137);
+    margin-right: 20px
+}
+.next-button {
+    width: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgb(255, 137, 137);
+    margin-left: 20px
+}
+.previous-button:hover {
+    background-color:  rgb(249, 96, 96);
+}
+.next-button:hover {
+    background-color:  rgb(249, 96, 96);
+}
+.photo-description {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.photo-description p {
+    background-color: rgba(211, 211, 211, 0.6);
+    Padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
 @media(max-width: 826px) {
     .june-sitting, .charlee-beer {
         display: none;
