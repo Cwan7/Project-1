@@ -95,7 +95,7 @@ nav li:first-child {
     width: 150px;
     padding: 8px;
     border-radius: 5px;
-    background-color: rgb(125, 180, 125);;
+    background-color: rgb(125, 180, 125);
 }
 .dogs-button:hover{
     background-color:  rgb(91, 138, 91);
@@ -108,6 +108,9 @@ nav li:first-child {
 }
 .color-button:hover {
     background-color:  rgb(91, 138, 91);
+}
+.random-button:hover {
+    background-color: rgb(91, 138, 91);
 }
 .buttons-result-container {
     width: 600px;
@@ -152,10 +155,10 @@ nav li:first-child {
     padding:5px;
     border-radius: 5px;
     font-size: 15px;
-    background-color: rgb(255, 137, 137);
+    background-color: rgb(91, 138, 91);
 }
 .dog-button:hover {
-    background-color:  rgb(249, 96, 96);
+    background-color: rgb(65, 107, 65);
 }
 /*-------------------------------Remote-------------------------*/
 .remote-container {
@@ -287,21 +290,21 @@ nav li:first-child {
     width: 100px;
     padding: 8px;
     border-radius: 5px;
-    background-color: rgb(255, 137, 137);
+    background-color: rgb(125, 180, 125);
     margin-right: 20px
 }
 .next-button {
     width: 100px;
     padding: 8px;
     border-radius: 5px;
-    background-color: rgb(255, 137, 137);
+    background-color:rgb(125, 180, 125);
     margin-left: 20px
 }
 .previous-button:hover {
-    background-color:  rgb(249, 96, 96);
+    background-color:   rgb(91, 138, 91);
 }
 .next-button:hover {
-    background-color:  rgb(249, 96, 96);
+    background-color:   rgb(91, 138, 91);
 }
 .photo-description {
     display: flex;

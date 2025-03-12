@@ -41,11 +41,11 @@ toggleElement.addEventListener('click', () => {
         navbarElement.style.backgroundColor ='rgb(255, 255, 255)';
         toggleElement.style.color = 'black'
         bodyElement.style.backgroundImage = "url('images/wood-dock.jpg')";
-        dogsAgeButtonElement.style.backgroundColor = ' rgb(91, 138, 91);';
-        primeButtonElement.style.backgroundColor = ' rgb(91, 138, 91);';
-        zodiacButtonElement.style.backgroundColor = ' rgb(91, 138, 91);';
-        colorButtonElement.style.backgroundColor = ' rgb(91, 138, 91);';
-        randomButtonElement.style.backgroundColor = ' rgb(91, 138, 91);';
+        dogsAgeButtonElement.style.backgroundColor = 'rgb(125, 180, 125)';
+        primeButtonElement.style.backgroundColor = 'rgb(125, 180, 125)';
+        zodiacButtonElement.style.backgroundColor = 'rgb(125, 180, 125)';
+        colorButtonElement.style.backgroundColor = 'rgb(125, 180, 125)';
+        randomButtonElement.style.backgroundColor = 'rgb(125, 180, 125)';
         toggled = false;
     }
     
