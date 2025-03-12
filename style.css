@@ -44,7 +44,7 @@ nav li:first-child {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid black;
-    padding: 10px 10px;
+    padding: 1px 10px;
 
 }
 .pop-up {
@@ -85,7 +85,7 @@ nav li:first-child {
     width: 150px;
     padding: 8px;
     border-radius: 5px;
-    background-color: rgb(255, 137, 137);
+    background-color: rgb(255, 137, 137);;
 }
 .dogs-button:hover{
     background-color:  rgb(249, 96, 96);
@@ -173,7 +173,7 @@ nav li:first-child {
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
-    flex: 1; /* Makes buttons equal width in row */
+    flex: 1; /* Makes buttons equal width in row instead just filling text width*/
     font-size: 14px;
 }
 

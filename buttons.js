@@ -10,10 +10,37 @@ const zodiacButtonElement = document.querySelector('.zodiac-button')
 const resultElement = document.querySelector('.buttons-result')
 const allInputsElement = document.querySelector('.input')
 
+const toggleElement = document.querySelector('.toggle');
+const navbarElement = document.querySelector('.navbar');
+const bodyElement = document.querySelector('body');
+
+
+
 dogsAgeInputElement.addEventListener('click', clearResult)
 primeInputElement.addEventListener('click', clearResult)
 zodiacInputElement.addEventListener('click', clearResult)
 
+let toggled = false;
+toggleElement.addEventListener('click', () => {
+    if(toggled === false) {
+        navbarElement.style.backgroundColor = 'rgb(125, 167, 193)';
+        toggleElement.style.color = 'green'
+        bodyElement.style.backgroundImage = "url('images/cleanBackground.jpg')";
+        dogsAgeButtonElement.style.backgroundColor = 'rgb(66, 110, 144)';
+        primeButtonElement.style.backgroundColor = 'rgb(66, 110, 144)';
+        zodiacButtonElement.style.backgroundColor = 'rgb(66, 110, 144)';
+        toggled = true;
+    } else {
+        navbarElement.style.backgroundColor ='rgb(255, 255, 255)';
+        toggleElement.style.color = 'black'
+        bodyElement.style.backgroundImage = "url('images/wood-dock.jpg')";
+        dogsAgeButtonElement.style.backgroundColor = 'rgb(255, 137, 137)';
+        primeButtonElement.style.backgroundColor = 'rgb(255, 137, 137)';
+        zodiacButtonElement.style.backgroundColor = 'rgb(255, 137, 137)';
+        toggled = false;
+    }
+    
+})
 dogsAgeButtonElement.addEventListener('click', () => {
     dogsAge = dogsAgeInputElement.value;
     if (dogsAge <= 0) {

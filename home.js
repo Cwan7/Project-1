@@ -1,65 +1,44 @@
-const bodyElement = document.querySelector('.body')
+const bodyElement1 = document.querySelector('.body')
 const popUpElement = document.querySelector('.pop-up')
 const closeButtonElement = document.querySelector('.close-pop-up')
-const dogsAgeInputElement = document.querySelector('#dog')
+const punchLineElement = document.querySelector('.pop-up-body')
+const toggleElement = document.querySelector('.toggle');
+const navbarElement = document.querySelector('.navbar');
+const bodyElement = document.querySelector('body');
 
-const dogsAgeButtonElement = document.querySelector('.dogs-button')
+let bodyClicked = 0;
+let toggled = false;
 
-const primeInputElement = document.querySelector('#prime')
-const primeButtonElement = document.querySelector('.prime-button')
-
-const resultElement = document.querySelector('.buttons-result')
-const allInputsElement = document.querySelector('.input')
-
-let didItPopUP = false;
-
-bodyElement.addEventListener('click', function(event) {
-    if (didItPopUP === true) return;
-    else {
+bodyElement1.addEventListener('click', function(event) {
+    if (bodyClicked === 2) return;
+    if (bodyClicked === 0) {
         popUpElement.style.display = 'block'
-        didItPopUP = true;
-    } 
+        bodyClicked = 1;
+        return;
+    }
+    if (bodyClicked === 1 ){
+        punchLineElement.innerHTML = "Why did David Hasselhoff change his name to “The Hoff? Its less Hassel!";
+        bodyClicked = 2;
+        return;
+    }
 })
 closeButtonElement.addEventListener('click', () => {
+    if(bodyClicked === 2) {
         popUpElement.style.display = 'none'
+    }
+})
+toggleElement.addEventListener('click', () => {
+    if(toggled === false) {
+        navbarElement.style.backgroundColor = 'rgb(125, 167, 193)';
+        toggleElement.style.color = 'green'
+        bodyElement.style.backgroundImage = "url('images/cleanBackground.jpg')";
+        toggled = true;
+    } else {
+        navbarElement.style.backgroundColor ='rgb(255, 255, 255)';
+        toggleElement.style.color = 'black'
+        bodyElement.style.backgroundImage = "url('images/wood-dock.jpg')";
+        toggled = false;
+    }
+    
 })
 
-// dogsAgeInputElement.addEventListener('click', clearResult)
-
-
-// primeInputElement.addEventListener('click', clearResult)
-
-// dogsAgeButtonElement.addEventListener('click', () => {
-//     dogsAge = dogsAgeInputElement.value;
-//     if (dogsAge <= 0) {
-//         resultElement.innerHTML = "Dog isn't alive";
-//     } else if (dogsAge <= 2) {
-//         resultElement.innerHTML = `${dogsAge * 12.5} in human years!`;
-//     } else if (dogsAge > 2) {
-//         resultElement.innerHTML = ((25 + (dogsAge - 2) * 4) + ' in human years!');
-//     }
-// })
-// function clearResult (){
-//     resultElement.innerHTML = '';
-//     dogsAgeInputElement.value = '';
-//     primeInputElement.value = '';
-
-// }
-// primeButtonElement.addEventListener('click', checkPrime);
-
-// function isItPrime(digit) {
-//     for (i = 2; i < digit; i++) {
-//         if (digit % i === 0) {
-//             return false;
-//         }
-//     } 
-// return true;
-// }
-// function checkPrime() {
-//     digit = primeInputElement.value;
-//     if (isItPrime(digit)) {
-//         resultElement.innerHTML = `${digit} is Prime!`
-//     } else {
-//         resultElement.innerHTML = `${digit} is not Prime`
-//     }
-// }

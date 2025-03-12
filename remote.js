@@ -10,6 +10,9 @@ const tvElement = document.querySelector('.tv');
 const tvOffElement = document.querySelector('.tvOff')
 const muteElement = document.querySelector('#mute')
 const emojiElement = document.querySelector('.emoji');
+const toggleElement = document.querySelector('.toggle');
+const navbarElement = document.querySelector('.navbar');
+const bodyElement = document.querySelector('body');
 
 
 const emojis = ['🐶','🐱','🐭','🐹','🐰','🦊','🐻','🐼','🐻‍❄️','🐨','🐯',
@@ -28,6 +31,26 @@ let isTvOn = false
 let channelTimeout;
 let mute = false
 let index = 0;
+let toggled = false;
+
+toggleElement.addEventListener('click', () => {
+    if(toggled === false) {
+        navbarElement.style.backgroundColor = 'rgb(125, 167, 193)';
+        toggleElement.style.color = 'green'
+        bodyElement.style.backgroundImage = "url('images/cleanBackground.jpg')";
+        tvElement.style.outline = '20px solid rgb(6, 55, 73)';
+        powerElement.style.backgroundColor = 'rgb(171, 171, 171)';
+        toggled = true;
+    } else {
+        navbarElement.style.backgroundColor ='rgb(255, 255, 255)';
+        toggleElement.style.color = 'black'
+        bodyElement.style.backgroundImage = "url('images/wood-dock.jpg')";
+        tvElement.style.outline = '20px solid rgb(70, 33, 33)';
+        powerElement.style.backgroundColor = 'rgb(255, 54, 54)';
+        toggled = false;
+    }
+    
+})
 
 
 powerElement.addEventListener('click', () => {
@@ -54,7 +77,7 @@ channelUpElement.addEventListener('click', () => {
     let currentChannelNum = Number(currentChannel) // Convert to number so I can increment it,
     currentChannelNum += 1; 
     currentChannel = currentChannelNum.toString(); // Convert back to string for buttons
-    if (currentChannel > 99){currentChannel = 1}
+    // if (currentChannel > 99){currentChannel = 1}
     channelDisplayElement.innerHTML = `Channel <span class="number">${currentChannel}</span>`;
     clearTimeout(channelTimeout);
     channelTimeout = setTimeout(clearChannel, 3000); 
