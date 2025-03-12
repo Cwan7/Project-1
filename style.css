@@ -71,38 +71,52 @@ nav li:first-child {
     background-color: white;
     cursor: pointer;
 }
+/*---------------------------------BUTTONS-------------------*/
 .buttons-input {
     display: flex;
     justify-content: space-evenly;
-    margin: 40px 0;
-    
+    margin: 40px 0;   
 }
-.buttons-button {
+.buttons-input2 {
     display: flex;
     justify-content: space-evenly;
 }
-.dogs-button, .prime-button, .zodiac-button {
+#colorDropdown, #randomDropdown {
+    display: inline-block; 
+    width: 150px;
+    margin-top: 40px;
+    
+}
+.buttons-button, .buttons-button2{
+    display: flex;
+    justify-content: space-evenly;
+}
+.dogs-button, .prime-button, .zodiac-button, .color-button, .random-button{
     width: 150px;
     padding: 8px;
     border-radius: 5px;
-    background-color: rgb(255, 137, 137);;
+    background-color: rgb(125, 180, 125);;
 }
 .dogs-button:hover{
-    background-color:  rgb(249, 96, 96);
+    background-color:  rgb(91, 138, 91);
 }
 .prime-button:hover {
-    background-color:  rgb(249, 96, 96);
+    background-color:   rgb(91, 138, 91);
 }
 .zodiac-button:hover {
-    background-color:  rgb(249, 96, 96);
+    background-color:   rgb(91, 138, 91);
+}
+.color-button:hover {
+    background-color:  rgb(91, 138, 91);
 }
 .buttons-result-container {
-    width: 400px;
+    width: 600px;
     height: 150px;
     display: flex;
     align-items: center;
     margin: auto;
-    margin-top: 200px
+    margin-top: 200px;
+    margin-bottom: 40px;
     
 }
 .buttons-result {
@@ -110,7 +124,9 @@ nav li:first-child {
     margin: auto;
     font-size: 34px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
 }
+/*------------------------------------------DOGS-----------------------*/
 .video-container {
     display: flex;
     justify-content: space-evenly;
