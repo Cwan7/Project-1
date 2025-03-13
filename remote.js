@@ -77,7 +77,7 @@ channelUpElement.addEventListener('click', () => {
     let currentChannelNum = Number(currentChannel) // Convert to number so I can increment it,
     currentChannelNum += 1; 
     currentChannel = currentChannelNum.toString(); // Convert back to string for buttons
-    // if (currentChannel > 99){currentChannel = 1}
+    if (currentChannel > 99){currentChannel = 1}
     channelDisplayElement.innerHTML = `Channel <span class="number">${currentChannel}</span>`;
     clearTimeout(channelTimeout);
     channelTimeout = setTimeout(clearChannel, 3000); 
