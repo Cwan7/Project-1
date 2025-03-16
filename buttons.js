@@ -74,7 +74,7 @@ function clearResult (){
 primeButtonElement.addEventListener('click', checkPrime);
 
 function isItPrime(digit) {
-    for (i = 2; i < digit; i++) {
+    for (i = 2; i < digit/2; i++) {
         if (digit % i === 0) {
             return false;
         }
